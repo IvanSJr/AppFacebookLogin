@@ -107,3 +107,5 @@ GitHub.sublime-settings
 
 /.idea/.name
 /.idea/AppSocialLogin.iml
+
+secrets_settings.py
