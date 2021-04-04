@@ -1,0 +1,1 @@
+web: gunicorn AppSocialLogin.wsgi --log-file -
