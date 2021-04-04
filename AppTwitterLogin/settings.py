@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '5l%#dvvq+as^e^0x93t**winriskyw+7kfbj278^kxwf0t-1ro'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,6 +79,7 @@ WSGI_APPLICATION = 'AppTwitterLogin.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+"""# Configuração de banco de dados para uso local
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -87,6 +89,11 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432'
     }
+}
+"""
+# Banco de dados para produção
+DATABASES = {
+    'default': dj_database_url.config()
 }
 
 # Password validation
@@ -147,7 +154,7 @@ CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 X_FRAME_OPTIONS = 'DENY'
 
-# SECURE_SSL_REDIRECT = True  Descomentar quando mandar para o heroku
+SECURE_SSL_REDIRECT = True  # Descomentar quando mandar para o heroku
 
 SOCIAL_AUTH_RAISE_EXCEPTIONS = False
 

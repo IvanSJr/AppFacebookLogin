@@ -1,0 +1,1 @@
+web: gunicorn AppTwitterLogin.wsgi --log-file -
