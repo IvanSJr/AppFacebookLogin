@@ -125,6 +125,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
+
 STATIC_URL = '/static/'
 
 AUTHENTICATION_BACKENDS = [
@@ -142,4 +147,4 @@ CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 X_FRAME_OPTIONS = 'DENY'
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True  Descomentar quando mandar para o heroku
