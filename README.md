@@ -1,2 +1,2 @@
-# AppTwitterLogin
- Aplicação com autentificação feita utilizando twitter.
+# AppFacebookLogin
+ Aplicação com autentificação feita utilizando facebook.
