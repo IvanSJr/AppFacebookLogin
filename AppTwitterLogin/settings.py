@@ -133,7 +133,7 @@ LOGOUT_REDIRECT_URL = 'login'
 STATIC_URL = '/static/'
 
 AUTHENTICATION_BACKENDS = [
-    'social_core.backends.facebook.Facebook0Auth2',
+    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
