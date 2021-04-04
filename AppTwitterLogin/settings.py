@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+from secrets_settings import SECRET_KEY, SOCIAL_AUTH_FACEBOOK_KEY, SOCIAL_AUTH_FACEBOOK_SECRET
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5l%#dvvq+as^e^0x93t**winriskyw+7kfbj278^kxwf0t-1ro'
+SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -153,8 +153,8 @@ SOCIAL_AUTH_RAISE_EXCEPTIONS = False
 
 # Coringurações para Facebook
 
-SOCIAL_AUTH_FACEBOOK_KEY = '489363062257564'
-SOCIAL_AUTH_FACEBOOK_SECRET = '4c92f7977e2d3a09ac0e70d2302a8801'
+SOCIAL_AUTH_FACEBOOK_KEY = SOCIAL_AUTH_FACEBOOK_KEY
+SOCIAL_AUTH_FACEBOOK_SECRET = SOCIAL_AUTH_FACEBOOK_SECRET
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['', '']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email, picture.type(large), link'
