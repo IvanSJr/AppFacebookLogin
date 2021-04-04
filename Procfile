@@ -1,1 +1,1 @@
-web: gunicorn AppTwitterLogin.wsgi --log-file -
+web: gunicorn AppSocialLogin.wsgi --log-file -
