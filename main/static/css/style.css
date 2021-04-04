@@ -10,7 +10,7 @@ img {
     align-items: center;
 }
 
-.conteiner-fluid > div {
+.container-fluid > div {
     width: 85%;
     min-width: 300px;
     max-width: 500px;
